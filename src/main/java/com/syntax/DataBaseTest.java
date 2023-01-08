@@ -6,6 +6,8 @@ public class DataBaseTest {
     public static void main(String[] args) {
         // To build connection to the database, we need 3 things
        // : url, username ,password
+
+        //Type of database : mysql, oracle etc.
        //              type of database             /database we wanna connect
         String url="jdbc:mysql://3.239.253.255:3306/syntaxhrm_mysql";   //jdbc: java database conectivity
         String username="syntax_hrm";
@@ -35,7 +37,7 @@ public class DataBaseTest {
             System.out.println("-----EXTRACTING DATA FROM RESULTSET USING LOOP");
 
             while (rset.next()){
-                fName= rset.getString("FirstName");
+                fName= rset.getString("FirstName");  //Exact name as in the table
                 lName= rset.getString("LastName");
                 System.out.println(fName+" "+lName);
             }
